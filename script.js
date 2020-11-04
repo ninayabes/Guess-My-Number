@@ -12,24 +12,29 @@ document.querySelector('.check').addEventListener('click', function () {
   console.log(guess, typeof guess);
 
   if (!guess) {
-    displayMessage(' ⛔ No number!');
+    displayMessage(' INVALID ENTRY!');
+    document.querySelector('.message').style.fontSize = '3rem';
   } else if (guess === secretNumber) {
-    displayMessage(' 🎉 Correct Number!');
+    displayMessage('YOU WIN!');
     document.querySelector('.number').textContent = secretNumber;
-    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('body').style.backgroundColor = '#078E52';
+    document.querySelector('.message').style.fontSize = '3rem';
     document.querySelector('.number').style.width = '30rem';
 
     if (score > highScore) {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
+      document.querySelector('.message').style.fontSize = '3rem';
     }
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      displayMessage(guess > secretNumber ? ' 📈 Too high!' : ' 📉 Too low!');
+      displayMessage(guess > secretNumber ? ' TOO HIGH!' : ' TOO LOW!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      displayMessage(' 💥 You lost the game!');
+      displayMessage('YOU LOST!');
+      document.querySelector('body').style.backgroundColor = '#8E0707';
+      document.querySelector('.message').style.fontSize = '3rem';
       document.querySelector('.score').textContent = 0;
     }
   }
