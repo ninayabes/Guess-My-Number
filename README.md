@@ -1,4 +1,4 @@
-# Guess-My-Number
+# Guess-My-Number!
 
 "Guess My Number" is a simple number guessing game that I developed in JavaScript as coding exercise to practice.
 
