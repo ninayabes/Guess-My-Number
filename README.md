@@ -1,4 +1,4 @@
-# Guess-My-Number!
+# guess-my-number
 
 
 https://guess-my-num-js.netlify.app/
