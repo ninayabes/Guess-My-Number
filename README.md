@@ -1,6 +1,5 @@
 # Guess-My-Number!
 
-"Guess My Number" is a simple number guessing game that I developed using JavaScript, HTML, and CSS as coding exercise.
 
 https://guess-my-num-js.netlify.app/
 
